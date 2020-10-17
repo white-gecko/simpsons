@@ -9,3 +9,5 @@ where it is part of an assignment:
 https://www.uio.no/studier/emner/matnat/ifi/INF3580/v17/undervisningsmateriale/oblig_4.pdf
 
 I have slightly adopted it and moved it to the `<http://example.org/>` namespace.
+
+The simpsons graph is also included in the [JekyllRDF tutorial](https://github.com/white-gecko/JekyllRDF-Tutorial): https://github.com/white-gecko/JekyllRDF-Tutorial/blob/master/_data/graph.ttl ([JekyllRDF](https://github.com/AKSW/jekyll-rdf))
