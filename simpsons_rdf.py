@@ -9,7 +9,7 @@ class Simpsons():
     @property
     @cache
     def graph(self):
-        with importlib.resources.path(__name__, "simpsons.ttl") as data_path:
+        with importlib.resources.path(self.__module__, "simpsons.ttl") as data_path:
             return Graph().parse(data_path, format="turtle")
 
 simpsons = Simpsons()
