@@ -26,7 +26,7 @@ or
 poetry add simpsons-rdf
 ```
 
-use it like:
+use it like any other [RDFLib](https://rdflib.dev/) [Graph](https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html#rdflib.graph.Graph) object.
 
 ```python
 from simpsons import simpsons, SIM, FAM
