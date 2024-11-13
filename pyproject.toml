@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "simpsons"
+name = "simpsons-rdf"
 version = "0.1.0"
 description = ""
 authors = ["Natanael Arndt <arndtn@gmail.com>"]
