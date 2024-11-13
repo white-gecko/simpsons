@@ -1,20 +1,16 @@
 from rdflib import Graph, Namespace
 import importlib.resources
+from functools import cache
 
 SIM = Namespace("https://simpsons.example.org/")
 FAM = Namespace("https://vocab.example.org/family#")
 
-class _Simpsons():
-    _graph = None
-
+class Simpsons():
     @property
+    @cache
     def graph(self):
         print("run")
-        if self._graph is None:
-            self._graph = Graph()
-            with importlib.resources.path(__name__, "simpsons.ttl") as data_path:
-                self._graph.parse(data_path, format="turtle")
-        return self._graph
+        with importlib.resources.path(__name__, "simpsons.ttl") as data_path:
+            return Graph().parse(data_path, format="turtle")
 
-_simpsons = _Simpsons()
-graph = getattr(_simpsons, "graph")
+simpsons = Simpsons()
