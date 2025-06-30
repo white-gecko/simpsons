@@ -1,19 +1,9 @@
 [tool.poetry]
-name = "simpsons-rdf"
-version = "0.2.1"
-description = "An example rdflib graph with some simpsons."
-repository = "https://github.com/white-gecko/simpsons"
-authors = ["Natanael Arndt <arndtn@gmail.com>"]
-readme = "README.md"
 packages = [
     { include = "./simpsons.ttl" },
     { include = "./simpsons*.py" }
 ]
-
-[tool.poetry.dependencies]
-python = "^3.11"
-rdflib = "^7.1.4"
-
+requires-poetry = '>=2.0'
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.3"
@@ -23,5 +13,17 @@ pytest = "^8.3.3"
 ruff = "^0.7.3"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ['poetry-core (>=2.0)']
 build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "simpsons-rdf"
+description = "An example rdflib graph with some simpsons."
+version = "0.2.1"
+readme = "README.md"
+authors = [{name = "Natanael Arndt", email = "arndtn@gmail.com"}]
+requires-python = '>=3.11,<4.0'
+dependencies = ['rdflib (>=7.1.4,<8.0.0)']
+
+[project.urls]
+repository = "https://github.com/white-gecko/simpsons"
