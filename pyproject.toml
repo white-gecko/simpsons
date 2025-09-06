@@ -1,8 +1,4 @@
 [tool.poetry]
-packages = [
-    { include = "./simpsons.ttl" },
-    { include = "./simpsons*.py" }
-]
 requires-poetry = '>=2.0'
 
 [tool.poetry.group.test.dependencies]
